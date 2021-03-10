@@ -1,7 +1,8 @@
 import React from "react";
+import Global from "./global";
 
 function App() {
-  return <div className="App"></div>;
+  return <Global />;
 }
 
 export default App;
