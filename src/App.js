@@ -1,12 +1,14 @@
 import React from "react";
 import Header from "./components/Header";
+import Board from "./components/Board";
 import Global from "./global";
 
 function App() {
   return (
     <>
-      <Global />
       <Header />
+      <Board />
+      <Global />
     </>
   );
 }
