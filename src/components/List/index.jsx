@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../Card";
 import { Container } from "./styles";
 
-function List({ data }) {
+export default function List({ data, index: listIndex }) {
   return (
     <Container done={data.done}>
       <header>
@@ -16,11 +16,9 @@ function List({ data }) {
 
       <ul>
         {data.cards.map((card, index) => (
-          <Card key={card.id} index={index} data={card} />
+          <Card key={card.id} listIndex={listIndex} index={index} data={card} />
         ))}
       </ul>
     </Container>
   );
 }
-
-export default List;
