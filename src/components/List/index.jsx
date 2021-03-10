@@ -1,5 +1,5 @@
 import React from "react";
-
+import Card from "../Card";
 import { Container } from "./styles";
 
 function List() {
@@ -11,6 +11,13 @@ function List() {
           <i className="fas fa-plus" />
         </button>
       </header>
+
+      <ul>
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+      </ul>
     </Container>
   );
 }
