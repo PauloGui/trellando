@@ -2,21 +2,22 @@ import React from "react";
 import Card from "../Card";
 import { Container } from "./styles";
 
-function List() {
+function List({ data }) {
   return (
-    <Container>
+    <Container done={data.done}>
       <header>
-        <h2>To Do</h2>
-        <button type="button">
-          <i className="fas fa-plus" />
-        </button>
+        <h2>{data.title}</h2>
+        {data.creatable && (
+          <button type="button">
+            <i className="fas fa-plus" />
+          </button>
+        )}
       </header>
 
       <ul>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {data.cards.map((card) => (
+          <Card key={card.id} data={card} />
+        ))}
       </ul>
     </Container>
   );
